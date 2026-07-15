@@ -7,18 +7,23 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: #f4f4f4;
     color: #333;
 }
 
 /* Navigation Bar */
 .navbar {
-    background-color: #0077cc;
+    background: #2c3e50;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -33,7 +38,7 @@ body {
 .nav-links a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-size: 18px;
 }
 
 .nav-links a:hover {
@@ -42,49 +47,48 @@ body {
 
 /* Header */
 .header {
-    background-color: #0099ff;
+    background: #3498db;
     color: white;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px;
 }
 
 /* Main Content */
 .main-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    gap: 20px;
     padding: 30px;
-
 }
 
-.content-box {
+.card {
     background: white;
-    width: 80%;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px gray;
+    width: 45%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Footer */
 .footer {
-    background-color: #333;
+    background: #2c3e50;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 20px;
 }
 
 /* ==========================
-   Mobile (max-width: 768px)
+   Mobile (max-width:768px)
 ========================== */
 @media (max-width: 768px) {
 
     .navbar {
         flex-direction: column;
-        text-align: center;
     }
 
     .nav-links {
         flex-direction: column;
+        text-align: center;
         margin-top: 10px;
     }
 
@@ -97,16 +101,20 @@ body {
     }
 
     .header p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
-    .content-box {
-        width: 95%;
+    .main-content {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
     }
 }
 
 /* ==========================
-   Tablet (769px - 1024px)
+   Tablet (769px-1024px)
 ========================== */
 @media (min-width: 769px) and (max-width: 1024px) {
 
@@ -118,8 +126,12 @@ body {
         font-size: 30px;
     }
 
-    .content-box {
-        width: 90%;
+    .main-content {
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 48%;
     }
 }
 
@@ -128,11 +140,17 @@ body {
 ========================== */
 @media (min-width: 1025px) {
 
-    .header h1 {
-        font-size: 40px;
+    .navbar {
+        max-width: 1200px;
+        margin: auto;
     }
 
-    .content-box {
-        width: 70%;
+    .header {
+        padding: 60px;
+    }
+
+    .main-content {
+        max-width: 1200px;
+        margin: auto;
     }
 }
